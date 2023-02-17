@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Hello</title>
+    <link rel="stylesheet" href="./css/app.css">
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <div id="app" class="container">
+        <h1 :class="iAmTitle">{{message}}</h1>
+        <img :src="imgUrl" :class="imgClass">
+    </div>
+
+    <script>
+
+    const { createApp } = Vue
+
+    createApp({
+        data() {
+        return {
+            iAmTitle: "title-fs",
+            message: "Hi I'm the Bring Me The Horizon Logo",
+            imgUrl: "./img/BMTH-logo.svg.png",
+            imgClass: "square-img"
+        }
+        }
+    }).mount('#app')
+
+    </script>
+    
+</body>
+</html>
